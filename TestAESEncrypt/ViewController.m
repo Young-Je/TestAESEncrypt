@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HTCustomizedAESencrypt.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    libHTAESencrypt * test = [libHTAESencrypt new];
+    NSString *teststring = [libHTAESencrypt encrypt:@"wwwwfsf"];
+    NSLog(@"xx%@", teststring);
     // Do any additional setup after loading the view, typically from a nib.
 }
 

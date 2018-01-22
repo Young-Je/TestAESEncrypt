@@ -16,6 +16,9 @@
 		128548F220158D9400FD0CA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 128548F120158D9400FD0CA4 /* main.m */; };
 		128548FC20158D9400FD0CA4 /* TestAESEncryptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 128548FB20158D9400FD0CA4 /* TestAESEncryptTests.m */; };
 		1285490720158D9400FD0CA4 /* TestAESEncryptUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1285490620158D9400FD0CA4 /* TestAESEncryptUITests.m */; };
+		1285491E20158F3600FD0CA4 /* liblibHTAESencrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1285491A20158EA500FD0CA4 /* liblibHTAESencrypt.a */; };
+		12854925201598DD00FD0CA4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12854924201598DC00FD0CA4 /* CoreFoundation.framework */; };
+		12854927201598EA00FD0CA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12854926201598EA00FD0CA4 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 128548DB20158D9400FD0CA4;
 			remoteInfo = TestAESEncrypt;
+		};
+		1285491920158EA500FD0CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D7732FC2013A564005377C5;
+			remoteInfo = libHTAESencrypt;
+		};
+		1285491B20158F0B00FD0CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D7732FB2013A564005377C5;
+			remoteInfo = libHTAESencrypt;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +70,9 @@
 		1285490220158D9400FD0CA4 /* TestAESEncryptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAESEncryptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1285490620158D9400FD0CA4 /* TestAESEncryptUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAESEncryptUITests.m; sourceTree = "<group>"; };
 		1285490820158D9400FD0CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libHTAESencrypt.xcodeproj; path = libHTAESencrypt/libHTAESencrypt.xcodeproj; sourceTree = "<group>"; };
+		12854924201598DC00FD0CA4 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		12854926201598EA00FD0CA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12854927201598EA00FD0CA4 /* Foundation.framework in Frameworks */,
+				12854925201598DD00FD0CA4 /* CoreFoundation.framework in Frameworks */,
+				1285491E20158F3600FD0CA4 /* liblibHTAESencrypt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +106,12 @@
 		128548D320158D9300FD0CA4 = {
 			isa = PBXGroup;
 			children = (
+				1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */,
 				128548DE20158D9400FD0CA4 /* TestAESEncrypt */,
 				128548FA20158D9400FD0CA4 /* TestAESEncryptTests */,
 				1285490520158D9400FD0CA4 /* TestAESEncryptUITests */,
 				128548DD20158D9400FD0CA4 /* Products */,
+				1285491D20158F3600FD0CA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +160,23 @@
 			path = TestAESEncryptUITests;
 			sourceTree = "<group>";
 		};
+		1285491520158EA500FD0CA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1285491A20158EA500FD0CA4 /* liblibHTAESencrypt.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1285491D20158F3600FD0CA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12854926201598EA00FD0CA4 /* Foundation.framework */,
+				12854924201598DC00FD0CA4 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +191,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1285491C20158F0B00FD0CA4 /* PBXTargetDependency */,
 			);
 			name = TestAESEncrypt;
 			productName = TestAESEncrypt;
@@ -227,6 +270,12 @@
 			mainGroup = 128548D320158D9300FD0CA4;
 			productRefGroup = 128548DD20158D9400FD0CA4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1285491520158EA500FD0CA4 /* Products */;
+					ProjectRef = 1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				128548DB20158D9400FD0CA4 /* TestAESEncrypt */,
@@ -235,6 +284,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1285491A20158EA500FD0CA4 /* liblibHTAESencrypt.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibHTAESencrypt.a;
+			remoteRef = 1285491920158EA500FD0CA4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		128548DA20158D9400FD0CA4 /* Resources */ = {
@@ -303,6 +362,11 @@
 			isa = PBXTargetDependency;
 			target = 128548DB20158D9400FD0CA4 /* TestAESEncrypt */;
 			targetProxy = 1285490320158D9400FD0CA4 /* PBXContainerItemProxy */;
+		};
+		1285491C20158F0B00FD0CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libHTAESencrypt;
+			targetProxy = 1285491B20158F0B00FD0CA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -378,6 +442,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/**";
 			};
 			name = Debug;
 		};
@@ -426,6 +491,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -438,9 +504,11 @@
 				DEVELOPMENT_TEAM = 339UKLN78L;
 				INFOPLIST_FILE = TestAESEncrypt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = HT.TestAESEncrypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/** $(CONFIGURATION_BUILD_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -452,9 +520,11 @@
 				DEVELOPMENT_TEAM = 339UKLN78L;
 				INFOPLIST_FILE = TestAESEncrypt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = HT.TestAESEncrypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/** $(CONFIGURATION_BUILD_DIR)/**";
 			};
 			name = Release;
 		};
