@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124D277D2017348700736402 /* libHTPaymentPasswordView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124D276920172A2700736402 /* libHTPaymentPasswordView.a */; };
 		128548E120158D9400FD0CA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 128548E020158D9400FD0CA4 /* AppDelegate.m */; };
 		128548E420158D9400FD0CA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128548E320158D9400FD0CA4 /* ViewController.m */; };
 		128548E720158D9400FD0CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128548E520158D9400FD0CA4 /* Main.storyboard */; };
@@ -22,6 +23,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		124D2742201713FD00736402 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 128548CD2015863700FD0CA4;
+			remoteInfo = HTUniversalASE;
+		};
+		124D276820172A2700736402 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 124D276420172A2700736402 /* HTPaymentPasswordView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 124D275820172A0E00736402;
+			remoteInfo = HTPaymentPasswordView;
+		};
 		128548F820158D9400FD0CA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 128548D420158D9300FD0CA4 /* Project object */;
@@ -52,7 +67,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		124D274B2017164200736402 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		124D276420172A2700736402 /* HTPaymentPasswordView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTPaymentPasswordView.xcodeproj; path = HTPaymentPasswordView/HTPaymentPasswordView.xcodeproj; sourceTree = "<group>"; };
 		128548DC20158D9400FD0CA4 /* TestAESEncrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAESEncrypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128548DF20158D9400FD0CA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		128548E020158D9400FD0CA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124D277D2017348700736402 /* libHTPaymentPasswordView.a in Frameworks */,
 				12854927201598EA00FD0CA4 /* Foundation.framework in Frameworks */,
 				12854925201598DD00FD0CA4 /* CoreFoundation.framework in Frameworks */,
 				1285491E20158F3600FD0CA4 /* liblibHTAESencrypt.a in Frameworks */,
@@ -103,9 +133,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		124D276520172A2700736402 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				124D276920172A2700736402 /* libHTPaymentPasswordView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		128548D320158D9300FD0CA4 = {
 			isa = PBXGroup;
 			children = (
+				124D276420172A2700736402 /* HTPaymentPasswordView.xcodeproj */,
 				1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */,
 				128548DE20158D9400FD0CA4 /* TestAESEncrypt */,
 				128548FA20158D9400FD0CA4 /* TestAESEncryptTests */,
@@ -187,10 +226,12 @@
 				128548D820158D9400FD0CA4 /* Sources */,
 				128548D920158D9400FD0CA4 /* Frameworks */,
 				128548DA20158D9400FD0CA4 /* Resources */,
+				124D274B2017164200736402 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				124D2743201713FD00736402 /* PBXTargetDependency */,
 				1285491C20158F0B00FD0CA4 /* PBXTargetDependency */,
 			);
 			name = TestAESEncrypt;
@@ -272,6 +313,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 124D276520172A2700736402 /* Products */;
+					ProjectRef = 124D276420172A2700736402 /* HTPaymentPasswordView.xcodeproj */;
+				},
+				{
 					ProductGroup = 1285491520158EA500FD0CA4 /* Products */;
 					ProjectRef = 1285491420158EA500FD0CA4 /* libHTAESencrypt.xcodeproj */;
 				},
@@ -286,6 +331,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		124D276920172A2700736402 /* libHTPaymentPasswordView.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libHTPaymentPasswordView.a;
+			remoteRef = 124D276820172A2700736402 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1285491A20158EA500FD0CA4 /* liblibHTAESencrypt.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -353,6 +405,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		124D2743201713FD00736402 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTUniversalASE;
+			targetProxy = 124D2742201713FD00736402 /* PBXContainerItemProxy */;
+		};
 		128548F920158D9400FD0CA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 128548DB20158D9400FD0CA4 /* TestAESEncrypt */;
@@ -442,7 +499,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/**";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/** $(CONFIGURATION_BUILD_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -491,7 +548,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/**";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/include/** $(CONFIGURATION_BUILD_DIR)/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
